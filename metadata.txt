@@ -1,0 +1,18 @@
+[general]
+name=Fireline Planner
+qgisMinimumVersion=3.16
+description=Prioritize forest blocks and plan fire line placement using multi-criteria vulnerability analysis
+version=0.1.3
+author=Karthick V
+email=karthickvifs@gmail.com
+about=Scores forest blocks by fire vulnerability (fire history, slope, proximity to villages/roads/HQ), allocates a fire-line budget (km) across the highest priority blocks, and generates candidate fire-line alignments along the forest-village interface, set back inside the forest.
+homepage=https://github.com/karthickvifs/fireline_planner
+tracker=https://github.com/karthickvifs/fireline_planner/issues
+repository=https://github.com/karthickvifs/fireline_planner
+icon=icon.png
+category=Analysis
+tags=fire,forestry,wildfire,firebreak,processing,vulnerability,prioritization
+experimental=True
+deprecated=False
+server=False
+changelog=0.1.3 - Updated plugin icon to final design (verified free of third-party trademarks). 0.1.2 - Updated plugin icon (original artwork, no third-party trademarks). 0.1.1 - Bugfix: Fire line placement (Step 3) truncation could silently fall back to the full untrimmed alignment (many times longer than the allocated budget) when the offset curve was a complex/compound geometry that QGIS's curveSubstring() could not handle. Replaced with a robust manual vertex-based truncation that always respects the allocated length. 0.1 - Initial release: vulnerability scoring, budget allocation, and fire line placement algorithms.
